@@ -1,0 +1,47 @@
+<app-header></app-header>
+<app-root (firstSet)="onAssign($event)"></app-root>
+
+<div class="container">
+    <div>
+        <div class="row pt-5">
+            <div class="col-md-4 p-2" *ngFor="let m of oldData">
+                <div class="card shadow" style="width: 15rem;"> 
+                    <img class="card-img-top" (click)="onClick(m)" src="{{m.bannerImage.url}}" alt="Card image cap">
+                    <div class="card-body">
+                        <p class="card-text">{{m.description}}</p>
+                        <button class="btn btn-danger btn-sm float-right" (click)="onAdd()"
+                                id="right" style="color:white">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus" viewBox="0 0 16 16">
+                                    <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
+                                  </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row pb-5">
+        <div class="col-md-12 p-5">
+        <ngx-spinner
+        bdOpacity = 0.9
+        bdColor = ""
+        size = "default"
+        color = "#581f87"
+        type = "ball-pulse-sync"
+        [fullScreen] = "false"
+        >
+        </ngx-spinner>
+      </div>
+    </div>
+    <!-- Alert no more post -->
+    <div *ngIf = "!notEmptyPost" class="row pb-5">
+        <div class="col-md-12 d-flex justify-content-center">
+            <div class="text-muted h6 alert alert-secondary p-2">No more items to show</div>
+        </div>
+    </div>
+</div>
+
+
+
+<app-footer></app-footer>

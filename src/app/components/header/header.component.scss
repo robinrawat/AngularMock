@@ -1,0 +1,50 @@
+.headerBox{
+    border: 1px solid #070707;
+    margin-left: 5rem;
+    display : flex;
+    flex-direction: row;
+    justify-content: space-between;
+    /* // position: fixed; */
+    margin-top: 0rem;
+
+    .logo{
+        margin-left: 1rem;
+        align-items: flex-start;
+        justify-content: flex-start;
+    }
+
+    .name{
+        align-items: center;
+        justify-content: center;
+    }
+
+    .cart{
+        align-items: flex-end;
+        justify-content: flex-end;
+        margin-right: 1rem;
+
+
+        #lblCartCount {
+            font-size: 12px;
+            background: #ff0000;
+            color: #fff;
+            padding: 0 5px;
+            vertical-align: top;
+            margin-left: -10px;
+        }
+        .badge {
+          padding-left: 9px;
+          padding-right: 9px;
+          -webkit-border-radius: 9px;
+          -moz-border-radius: 9px;
+          border-radius: 9px;
+        }
+        
+        .label-warning[href],
+        .badge-warning[href] {
+          background-color: #c67605;
+        }
+    }
+
+
+}
